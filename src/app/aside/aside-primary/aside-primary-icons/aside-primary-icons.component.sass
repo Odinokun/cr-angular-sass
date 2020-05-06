@@ -1,0 +1,59 @@
+@import '../../../../mixins'
+
+:host
+  width: 100%
+
+.aside-primary-icons__list
+  margin: 0
+  padding: 10px 0 0 0
+
+.aside-primary-icons__item
+  position: relative
+  overflow: hidden
+  margin-bottom: 30px
+  padding: 0
+  list-style: none
+
+  @include max(480)
+    margin-bottom: 15px
+
+  &::before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: -2px
+    width: 4px
+    height: 4px
+    margin: auto
+    content: ''
+    transition: opacity .5s ease-in-out
+    opacity: 0
+    border-radius: 50%
+    background-color: #2399f1
+    box-shadow: 0 0 10px rgba(35, 153, 241, .47)
+
+  &:hover
+    .aside-primary-icons__link
+      opacity: 1
+
+  &.active
+    &::before
+      opacity: 1
+    .aside-primary-icons__link
+      opacity: 1
+
+.aside-primary-icons__link
+  display: block
+  overflow: hidden
+  max-width: 50px
+  margin: 0 auto
+  transition: opacity .5s ease-in-out
+  opacity: .5
+  border-radius: 50%
+
+  @include max(480)
+    max-width: 35px
+
+  img
+    display: block
+    width: 100%

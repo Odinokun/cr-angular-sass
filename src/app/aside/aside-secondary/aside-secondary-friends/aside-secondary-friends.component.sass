@@ -1,0 +1,120 @@
+@import '../../../../variables'
+
+:host
+  margin-top: auto
+
+.aside-secondary-friends__header
+  display: flex
+  margin-bottom: 15px
+  padding: 0 30px
+
+.aside-secondary-friends__title
+  font-size: 12px
+  line-height: 16px
+  margin-bottom: 13px
+  user-select: none
+  text-transform: uppercase
+  color: #5b6779
+
+.aside-secondary-friends__icon
+  display: block
+  margin-left: auto
+  svg
+    fill: #475364
+    width: 16px
+    height: 16px
+
+.aside-secondary-friends__list
+  margin: 0
+  padding: 0
+
+.aside-secondary-friends__item
+  position: relative
+  display: flex
+  margin-bottom: 20px
+  padding: 0 30px
+  list-style: none
+  &:last-child
+    margin-bottom: 0
+
+.aside-secondary-friends__ava
+  position: relative
+  display: block
+  flex: none
+  &::before
+    position: absolute
+    z-index: 1
+    right: -3px
+    bottom: -3px
+    display: block
+    width: 18px
+    height: 18px
+    content: ''
+    border-radius: 50%
+    background-color: #222c3c
+
+  &::after
+    position: absolute
+    z-index: 2
+    right: 0
+    bottom: 0
+    display: block
+    width: 12px
+    height: 12px
+    content: ''
+    border-radius: 50%
+    background-color: #222c3c
+
+.aside-secondary-friends__ava--online
+  &::after
+    border: 3px solid #1bb934
+
+.aside-secondary-friends__ava--offline
+  &::after
+    border: 3px solid #e68a2f
+
+.aside-secondary-friends__ava-img
+  position: relative
+  display: block
+  overflow: hidden
+  flex: none
+  width: 40px
+  height: 40px
+  border-radius: 50%
+
+  img
+    display: block
+    width: 100%
+
+.aside-secondary-friends__info
+  position: relative
+  display: block
+  width: 100%
+  padding-left: 13px
+
+.aside-secondary-friends__name,
+.aside-secondary-friends__typing
+  font-size: 14px
+  display: block
+  color: #fff
+
+.aside-secondary-friends__position
+  font-size: 14px
+  display: block
+  color: #7c8ca5
+
+.aside-secondary-friends__counter
+  font-size: 14px
+  line-height: 24px
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  display: block
+  width: 24px
+  height: 24px
+  margin: auto
+  text-align: center
+  color: #fff
+  border-radius: 50%
+  background-image: $btn-gradient

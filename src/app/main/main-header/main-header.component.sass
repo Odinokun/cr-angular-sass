@@ -1,0 +1,99 @@
+@import '../../../mixins'
+
+.main-header
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px 30px
+  background-color: #fff
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05)
+
+  @include max(480)
+    flex-direction: column
+    align-items: flex-start
+
+.main-header__title
+  font-size: 24px
+  font-weight: 400
+  color: #354052
+
+  @include max(480)
+    margin-bottom: 10px
+
+.header-profile
+  display: flex
+  align-items: center
+  min-width: 192px
+
+.header-profile__ava
+  position: relative
+  flex: none
+
+  &::before
+    position: absolute
+    z-index: 1
+    right: -3px
+    bottom: -3px
+    display: block
+    width: 18px
+    height: 18px
+    content: ''
+    border-radius: 50%
+    background-color: #fff
+
+  &::after
+    position: absolute
+    z-index: 2
+    right: 0
+    bottom: 0
+    display: block
+    width: 12px
+    height: 12px
+    content: ''
+    border-radius: 50%
+    background-color: #fff
+
+.header-profile__ava--online
+  &::after
+    border: 3px solid #1bb934
+
+.header-profile__ava--offline
+  &::after
+    border: 3px solid #e68a2f
+
+.header-profile__ava-img
+  overflow: hidden
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  img
+    display: block
+    width: 100%
+
+.header-profile__info
+  padding-left: 15px
+
+.header-profile__name
+  font-size: 16px
+  display: block
+  color: #2399f1
+
+.header-profile__position
+  font-size: 14px
+  display: block
+  color: #b5b5b5
+
+.header-profile__arr
+  position: absolute
+  top: 0
+  right: 30px
+  bottom: 0
+  width: 7px
+  height: 4px
+  margin: auto
+  cursor: pointer
+  svg
+    fill: #bfc7d8
+    width: 7px
+    height: 4px

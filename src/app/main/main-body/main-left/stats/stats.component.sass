@@ -1,0 +1,102 @@
+@import '../../../../../mixins'
+
+.stats
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100%
+
+.stats-item
+  display: flex
+  flex-direction: column
+  width: calc(25% - 16.5px)
+  margin-bottom: 20px
+  border: 1px solid #e6eaee
+  border-radius: 4px
+  background-color: #fff
+
+  @include max(680)
+    width: calc(50% - 10px)
+
+  @include max(580)
+    width: 100%
+
+.stats-item__top
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 23px 15px 22px 15px
+  background-color: #fff
+
+.stats-item__val
+  font-size: 30px
+  font-weight: 400
+  margin-bottom: 7px
+  color: #354052
+
+.stats-item__descr
+  font-size: 12px
+  text-align: center
+  text-transform: uppercase
+
+.stats-item__top--new
+  .stats-item__descr
+    color: #4695d9
+
+.stats-item__top--sales .stats-item__descr
+  color: #21bb39
+
+.stats-item__top--paid .stats-item__descr
+  color: #f2a80a
+
+.stats-item__top--customers .stats-item__descr
+  color: #fc565e
+
+.stats-item__bottom
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 50px
+  margin-top: auto
+  padding: 5px
+  border-top: 1px solid #e6eaee
+  background-color: #f5f8fa
+
+.stats-item__bottom--up .stats-item__arr
+  background-color: #1bb934
+
+.stats-item__bottom--down .stats-item__arr
+  background-color: #f05352
+
+  &::before
+    transform: rotate(180deg) translateY(-1px)
+
+.stats-item__arr
+  position: relative
+  display: block
+  flex: none
+  width: 14px
+  height: 14px
+  margin-right: 13px
+  border-radius: 50%
+
+  &::before
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 0
+    height: 0
+    margin: auto
+    content: ''
+    border-right: 3px solid transparent
+    border-bottom: 5px solid #fff
+    border-left: 3px solid transparent
+
+.stats-item__rate
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  color: #354052

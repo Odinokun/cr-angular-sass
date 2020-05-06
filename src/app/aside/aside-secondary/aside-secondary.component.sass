@@ -1,0 +1,48 @@
+@import '../../../mixins'
+
+:host
+  display: flex
+
+.aside-secondary
+  display: flex
+  flex-direction: column
+  flex: none
+  width: 250px
+  padding: 30px 0
+  background-color: #222c3c
+
+  @include max(1350)
+    position: absolute
+    z-index: 1
+    top: 0
+    bottom: 0
+    left: 100px
+    transition: transform .5s ease-in-out
+    transform: translateX(-100%)
+
+    &.active
+      transform: translateX(0)
+
+  @include max(480)
+    left: 70px
+    width: 225px
+
+.aside-secondary__mobile-btn
+  font-size: 12px
+  line-height: 1
+  position: absolute
+  top: 0
+  left: 100%
+  display: none
+  width: 25px
+  padding: 16px 7px
+  cursor: pointer
+  user-select: none
+  text-align: center
+  text-transform: uppercase
+  word-wrap: break-word
+  color: #5b6779
+  background-color: #222c3c
+
+  @include max(1350)
+    display: block

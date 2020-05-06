@@ -1,0 +1,20 @@
+@import '../../../../mixins'
+
+.main__right
+  z-index: 10
+  flex: none
+  width: 370px
+
+  @include max(1150)
+    position: absolute
+    top: 30px
+    right: 30px
+    transition: transform .5s ease-in-out
+    transform: translateX(130%)
+
+    &.active
+      transform: translateX(0)
+
+  @include max(480)
+    right: 10px
+    width: 300px

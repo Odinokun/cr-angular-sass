@@ -1,0 +1,33 @@
+@import '../../../mixins'
+
+:host
+  width: 100%
+
+.main__body
+  position: relative
+  display: flex
+  padding: 30px 30px 10px 30px
+
+  @include max(1150)
+    padding-right: 0
+
+  @include max(480)
+    padding-left: 15px
+
+  &::before
+    position: absolute
+    z-index: 1
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    content: ''
+    transition: opacity .5s ease-in-out
+    pointer-events: none
+    opacity: 0
+    background-color: #fff
+
+  &.active
+    &::before
+      @include max(1150)
+        opacity: .8

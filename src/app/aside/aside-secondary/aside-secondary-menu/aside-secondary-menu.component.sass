@@ -1,0 +1,51 @@
+@import '../../../../variables'
+
+:host
+  margin-bottom: 12px
+
+.aside-secondary-menu__title
+  font-size: 12px
+  line-height: 1
+  margin-bottom: 13px
+  padding: 0 30px
+  user-select: none
+  text-transform: uppercase
+  color: #5b6779
+
+.aside-secondary-menu__list
+  margin: 0
+  padding: 0
+
+.aside-secondary-menu__item
+  position: relative
+  display: block
+  list-style: none
+
+.aside-secondary-menu__link
+  font-size: 14px
+  line-height: 36px
+  display: block
+  padding: 0 30px
+  transition: background-color .5s ease-in-out
+  text-decoration: none
+  color: #fff
+
+  &.active,
+  &:hover
+    background-color: #313d4f
+
+.aside-secondary-menu__counter
+  font-size: 14px
+  line-height: 24px
+  position: absolute
+  top: 0
+  right: 30px
+  bottom: 0
+  display: block
+  min-width: 32px
+  height: 24px
+  margin: auto
+  text-align: center
+  color: #fff
+  border-radius: 12px
+  background-image: $btn-gradient

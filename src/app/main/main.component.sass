@@ -1,0 +1,10 @@
+@import '../../mixins'
+
+:host
+  flex: 1
+  background-color: #eff3f6
+
+  @include max(680)
+    max-width: calc(100% - 100px)
+  @include max(480)
+    max-width: calc(100% - 70px)
